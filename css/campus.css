@@ -1,0 +1,92 @@
+/* NADI mockup - tampilan Web Akademik Kampus (simulasi), layar S0.
+   Tata letak dashboard generik: sidebar, kartu profil, statistik, tabel jadwal. */
+
+/* Di S0 sembunyikan header, footer, dan jejak NADI; ini situs kampus */
+body[data-layar="menu"] .site-head,
+body[data-layar="menu"] .site-foot,
+body[data-layar="menu"] .crumb{display:none}
+body[data-layar="menu"] .area{padding:0;min-height:0}
+body[data-layar="menu"]{background:#f1f4f9}
+
+.campus{--cb:#2563eb;--cb-l:#e6eefe;--ct:#1f2937;--cm:#5b6475;--cl:#e3e7ef;
+  color:var(--ct);min-height:calc(100vh - 40px)}
+.cp-wrap{display:grid;grid-template-columns:272px 1fr;align-items:stretch;min-height:calc(100vh - 40px)}
+
+/* ---------- Sidebar ---------- */
+.cp-side{background:#fff;border-right:1px solid var(--cl);padding:22px 16px 120px}
+.cp-logo{display:flex;align-items:center;gap:10px;padding:0 6px}
+.cp-mark{width:44px;height:44px;border-radius:12px;background:var(--cb-l);display:grid;place-items:center;flex:none}
+.cp-logo b{display:block;font-size:19px;letter-spacing:.04em;color:#1e3a8a;line-height:1.15}
+.cp-logo small{display:block;font-size:13px;color:var(--cm);line-height:1.25}
+.cp-sec{margin:22px 6px 6px;font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--cm);text-transform:uppercase}
+.cp-item,.cp-group summary{display:flex;align-items:center;gap:12px;min-height:46px;padding:8px 12px;border-radius:10px;
+  color:var(--ct);font-size:16px;cursor:default;list-style:none}
+.cp-group summary{cursor:pointer;justify-content:space-between}
+.cp-group summary::-webkit-details-marker{display:none}
+.cp-group summary .lft{display:flex;align-items:center;gap:12px}
+.cp-group summary::after{content:"›";font-size:22px;line-height:1;color:var(--cm);transform:rotate(90deg);transition:transform .15s}
+.cp-group:not([open]) summary::after{transform:rotate(0)}
+.cp-group summary:hover{background:#f3f6fb}
+.cp-item.act{background:var(--cb-l);color:#1d4ed8;font-weight:700}
+.cp-ic{width:22px;height:22px;border-radius:6px;background:#c9d2e3;flex:none}
+.cp-item.act .cp-ic{background:var(--cb)}
+.cp-sub{padding:2px 0 6px 0}
+.cp-nadi{display:flex;align-items:center;gap:10px;width:100%;min-height:50px;padding:8px 12px;border-radius:12px;text-align:left;
+  font:inherit;font-weight:700;color:#1e3a8a;background:var(--cb-l);border:2px solid var(--cb);cursor:pointer;transition:background .15s}
+.cp-nadi svg{flex:none}
+.cp-nadi-t{min-width:0;display:flex;flex-direction:column;line-height:1.25}
+.cp-nadi-t .t1{font-size:17px}
+.cp-nadi-t .t2{font-size:14px;font-weight:600;overflow-wrap:anywhere}
+.cp-nadi:hover{background:#d6e4ff}
+.cp-nadi:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+
+/* ---------- Konten utama ---------- */
+.cp-main{padding:20px 24px 140px;min-width:0}
+.cp-top{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#fff;border:1px solid var(--cl);
+  border-radius:14px;padding:12px 20px;margin-bottom:20px}
+.cp-top b{font-size:17px}
+.cp-user{display:flex;align-items:center;gap:10px;color:var(--cm);font-size:15px}
+.cp-avatar{width:40px;height:40px;border-radius:50%;background:#dbe3f3;display:grid;place-items:center}
+.cp-grid{display:grid;grid-template-columns:340px 1fr;gap:20px;align-items:start}
+.cp-card{background:#fff;border:1px solid var(--cl);border-radius:14px;box-shadow:0 2px 10px rgba(31,41,55,.04)}
+
+/* Profil */
+.cp-prof{padding:26px 24px}
+.cp-photo{width:130px;height:160px;border-radius:12px;background:#dbe3f3;margin:0 auto 14px;display:grid;place-items:center}
+.cp-name{text-align:center;font-size:20px;font-weight:700;margin:0 0 6px}
+.cp-nim{display:block;width:max-content;margin:0 auto 18px;background:#eceff4;color:#374151;padding:4px 16px;border-radius:8px;font-weight:600}
+.cp-prof hr{border:0;border-top:1px solid var(--cl);margin:0 0 16px}
+.cp-prof p{margin:0 0 8px;font-size:16px;color:var(--cm)}
+.cp-prof p b{color:var(--ct)}
+.cp-ok{display:inline-block;background:#15803d;color:#fff;font-weight:700;font-size:14px;padding:2px 12px;border-radius:6px}
+
+/* Statistik */
+.cp-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:22px 20px}
+.cp-st{display:flex;align-items:center;gap:12px;min-width:0}
+.cp-sti{width:46px;height:46px;border-radius:12px;flex:none;display:grid;place-items:center;font-weight:800;font-size:18px}
+.cp-st b{display:block;font-size:20px;letter-spacing:.12em;line-height:1.1}
+.cp-st small{display:block;color:var(--cm);font-size:14px;line-height:1.3}
+.s1{background:#dbe8ff;color:#1d4ed8}.s2{background:#d5f4fb;color:#0e7490}
+.s3{background:#d9f3e4;color:#15803d}.s4{background:#fde2e2;color:#b91c1c}
+.cp-masknote{border-top:1px solid var(--cl);text-align:center;padding:12px;color:var(--cm);font-size:15px}
+
+/* Jadwal */
+.cp-sched{margin-top:20px;padding:24px}
+.cp-sched h2{margin:0 0 16px;font-size:21px}
+.cp-tbl{width:100%;border-collapse:collapse;font-size:16px}
+.cp-tbl th,.cp-tbl td{text-align:left;padding:12px 14px;border:1px solid var(--cl)}
+.cp-tbl thead th{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--cm);background:#fafbfd}
+.cp-tbl tr.hi td{background:var(--cb-l)}
+.cp-tbl tr.hi td:first-child{border-left:4px solid var(--cb)}
+
+/* ---------- Layar sempit ---------- */
+@media (max-width:1180px){
+  .cp-grid{grid-template-columns:1fr}
+  .cp-stats{grid-template-columns:1fr 1fr;gap:16px}
+}
+@media (max-width:860px){
+  .cp-wrap{grid-template-columns:1fr}
+  .cp-side{border-right:0;border-bottom:1px solid var(--cl);padding-bottom:18px}
+  .cp-main{padding:16px 12px 150px}
+  .cp-tbl{display:block;overflow-x:auto}
+}

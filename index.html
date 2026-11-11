@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NADI - Mockup Rancangan</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/beranda.css">
+<link rel="stylesheet" href="css/campus.css">
+</head>
+<body data-layar="menu">
+
+<!-- Bagian atas: pita, banner offline, header -->
+<div class="topwrap">
+  <div class="ribbon" role="note">MOCKUP RANCANGAN, belum diuji. Data pada layar adalah data contoh.</div>
+  <div class="banner" id="banner-offline" role="status" hidden>Tidak ada sinyal. Check-in disimpan di perangkat dan dikirim saat tersambung.</div>
+
+  <header class="site-head">
+    <div class="wrap in">
+      <button type="button" class="brand" data-go="sso" aria-label="NADI, kembali ke beranda">
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 48 24" width="30" height="15" focusable="false">
+            <polyline points="1,12 12,12 17,3 24,21 30,8 34,12 47,12" fill="none" stroke="#0d3b1f" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="brand-t"><b>NADI</b><small>Platform Pencatatan Kondisi Singkat</small></span>
+      </button>
+      <!-- Navigasi: tampil di semua layar mahasiswa -->
+      <div id="foot" class="contents">
+                <nav class="nav" aria-label="Navigasi utama">
+          <button type="button" class="btn link" data-go="sso">Beranda</button>
+          <button type="button" class="btn link" data-go="ringkasan">Ringkasan mingguan</button>
+          <button type="button" class="btn link" data-go="pengaturan">Pengaturan dan privasi</button>
+        </nav>
+        <div class="cta-wrap">
+          <button type="button" class="btn sec sm" data-go="checkin">Check-in</button>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+
+<div class="wrap crumb">
+  <button type="button" class="btn link back" id="btn-back" data-act="back" hidden>&larr; Kembali</button>
+</div>
+  <!-- S0 menu: Web Akademik Kampus (simulasi) -->
+  <section id="s-menu" class="screen campus" hidden>
+    <div class="cp-wrap">
+
+      <aside class="cp-side" aria-label="Menu web akademik (simulasi)">
+        <div class="cp-logo">
+          <span class="cp-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="26" height="26" focusable="false">
+              <path d="M16 5 2 12l14 7 14-7z" fill="#2563eb"/>
+              <path d="M8 16v6c0 2 4 4 8 4s8-2 8-4v-6l-8 4z" fill="#60a5fa"/>
+            </svg>
+          </span>
+          <div><b>WEB AKADEMIK</b><small>Web Akademik Kampus (simulasi)</small></div>
+        </div>
+
+        <div class="cp-sec">Dashboard</div>
+        <div class="cp-item act"><span class="cp-ic" aria-hidden="true"></span>Dashboard</div>
+
+        <div class="cp-sec">Biodata</div>
+        <div class="cp-item"><span class="cp-ic" aria-hidden="true"></span>Biodata</div>
+        <div class="cp-item"><span class="cp-ic" aria-hidden="true"></span>Kartu Mahasiswa</div>
+
+        <div class="cp-sec">Menu</div>
+        <div class="cp-item"><span class="cp-ic" aria-hidden="true"></span>Akademik</div>
+        <div class="cp-item"><span class="cp-ic" aria-hidden="true"></span>Registrasi</div>
+
+        <details class="cp-group" open>
+          <summary><span class="lft"><span class="cp-ic" aria-hidden="true"></span>Aplikasi/Kemahasiswaan</span></summary>
+          <div class="cp-sub">
+              <button type="button" class="cp-nadi" data-go="sso">
+              <svg viewBox="0 0 48 24" width="26" height="13" aria-hidden="true" focusable="false"><polyline points="1,12 12,12 17,3 24,21 30,8 34,12 47,12" fill="none" stroke="#2563eb" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="cp-nadi-t"><span class="t1">NADI</span> <span class="t2">(Aplikasi/Kemahasiswaan)</span></span>
+            </button>
+          </div>
+        </details>
+
+        <div class="cp-item"><span class="cp-ic" aria-hidden="true"></span>Info Tambahan</div>
+        <div class="cp-item"><span class="cp-ic" aria-hidden="true"></span>Panduan</div>
+      </aside>
+
+      <div class="cp-main">
+        <div class="cp-top">
+          <b>Web Akademik Kampus (simulasi)</b>
+          <span class="cp-user">Mahasiswa Baru (contoh)
+            <span class="cp-avatar" aria-hidden="true">
+              <svg viewBox="0 0 32 32" width="22" height="22" focusable="false"><circle cx="16" cy="11" r="6" fill="#8fa1c4"/><path d="M4 28c1-7 6-10 12-10s11 3 12 10z" fill="#8fa1c4"/></svg>
+            </span>
+          </span>
+        </div>
+
+        <h1 class="sr-only" style="position:absolute;left:-9999px">Menu Web Akademik Kampus (simulasi)</h1>
+
+        <div class="cp-grid">
+          <div class="cp-card cp-prof">
+            <div class="cp-photo" aria-hidden="true">
+              <svg viewBox="0 0 32 32" width="64" height="64" focusable="false"><circle cx="16" cy="11" r="6" fill="#8fa1c4"/><path d="M4 28c1-7 6-10 12-10s11 3 12 10z" fill="#8fa1c4"/></svg>
+            </div>
+            <p class="cp-name">Mahasiswa Baru (contoh)</p>
+            <span class="cp-nim">[NIM contoh]</span>
+            <hr>
+            <p><b>Email:</b> [email contoh]</p>
+            <p><b>Fakultas:</b> [Fakultas contoh]</p>
+            <p><b>Program Studi:</b> [Program studi contoh]</p>
+            <p><b>Status:</b> <span class="cp-ok">Aktif</span></p>
+          </div>
+
+          <div>
+            <div class="cp-card">
+              <div class="cp-stats" aria-label="Ringkasan akademik, disamarkan">
+                <div class="cp-st"><span class="cp-sti s1" aria-hidden="true">✓</span><div><b>•••• / ••••</b><small>Beban / Lulus<br>SKS Semester</small></div></div>
+                <div class="cp-st"><span class="cp-sti s2" aria-hidden="true">✓</span><div><b>•••• / ••••</b><small>Beban / Lulus<br>SKS Kumulatif</small></div></div>
+                <div class="cp-st"><span class="cp-sti s3" aria-hidden="true">✓</span><div><b>•••• / ••••</b><small>Beban / Lulus<br>IP Semester</small></div></div>
+                <div class="cp-st"><span class="cp-sti s4" aria-hidden="true">✓</span><div><b>•••• / ••••</b><small>Beban / Lulus<br>IP Kumulatif</small></div></div>
+              </div>
+              <div class="cp-masknote">Nilai disamarkan pada simulasi ini. NADI tidak membaca atau menyimpan data ini.</div>
+            </div>
+
+            <div class="cp-card cp-sched">
+              <h2>Jadwal Perkuliahan (contoh)</h2>
+              <table class="cp-tbl">
+                <thead><tr><th>Hari</th><th>Mata kuliah</th><th>Jam</th><th>Ruang</th></tr></thead>
+                <tbody>
+                  <tr class="hi"><td>Senin</td><td>Mata Kuliah A (contoh)</td><td>08:00 - 09:40</td><td>[ruang]</td></tr>
+                  <tr class="hi"><td>Senin</td><td>Mata Kuliah B (contoh)</td><td>13:00 - 14:40</td><td>[ruang]</td></tr>
+                  <tr><td>Rabu</td><td>Mata Kuliah C (contoh)</td><td>10:00 - 11:40</td><td>[ruang]</td></tr>
+                  <tr><td>Rabu</td><td>Mata Kuliah D (contoh)</td><td>13:00 - 14:40</td><td>[ruang]</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+<main class="area" id="area">
+
+  <!-- S0 menu -->
+  <section id="s-menu" class="screen sheet" hidden>
+    <div class="campus-bar">Web Akademik Kampus (simulasi)</div>
+    <h1>Menu <span class="g">Utama</span></h1>
+    <ul class="menu-list">
+      <li><span class="menu-item off">Beranda</span></li>
+      <li><span class="menu-item off">Jadwal Kuliah</span></li>
+      <li><span class="menu-item off">Kartu Rencana Studi</span></li>
+      <li><span class="menu-item off">Pengumuman</span></li>
+    </ul>
+    <h2>Aplikasi/Kemahasiswaan</h2>
+    <button type="button" class="menu-item nadi" data-go="sso">NADI (Aplikasi/Kemahasiswaan)</button>
+  </section>
+
+  <!-- S1 sso: halaman depan -->
+  <section id="s-sso" class="screen landing" hidden>
+    <div class="wrap hero">
+      <div class="hero-text">
+        <span class="pilltag">Masuk SSO (simulasi)</span>
+        <h1>Cukup 30 detik untuk <span class="g">mencatat kondisimu</span>.</h1>
+        <p class="lead">NADI membantu mahasiswa baru mencatat jam tidur, suasana hati, dan tingkat energi. Semuanya opsional, tanpa skor, dan hanya kamu yang melihat hasilnya.</p>
+        <p class="sso-note">NADI hanya memeriksa bahwa kamu mahasiswa baru. NIM, nilai, IP, dan kehadiran tidak disimpan. [ASUMSI: perlu persetujuan unit TI]</p>
+        <div class="hero-cta">
+          <button type="button" class="btn big-btn" data-go="privasi">Masuk dengan akun kampus</button>
+        </div>
+        <div class="tags" aria-label="Yang dicatat">
+          <span>Jam tidur</span><span>Suasana hati</span><span>Energi</span><span>Catatan opsional</span>
+        </div>
+      </div>
+
+      <!-- Ilustrasi dekoratif (data contoh) -->
+      <div class="hero-visual" aria-hidden="true">
+        <div class="ring r1"></div><div class="ring r2"></div>
+        <div class="vcard stat">
+          <small>Jam tidur (contoh)</small>
+          <div class="mini-bars"><i style="height:62%"></i><i style="height:52%"></i><i style="height:40%"></i><i style="height:46%"></i><i style="height:68%"></i><i style="height:90%"></i><i style="height:80%"></i></div>
+        </div>
+        <div class="vcard back">
+          <span class="vlabel">Check-in hari ini (contoh)</span>
+          <div class="vrow"><span>Suasana hati</span><b>Biasa saja</b></div>
+          <div class="vrow"><span>Tingkat energi</span><b>Cukup</b></div>
+          <div class="vrow"><span>Catatan</span><b>Opsional</b></div>
+        </div>
+        <div class="vcard front">
+          <span class="vlabel">Jam tidur semalam</span>
+          <div class="vbig">6,5 jam</div>
+          <svg viewBox="0 0 160 30" width="140" height="26" focusable="false">
+            <polyline points="2,16 30,16 42,4 58,26 74,10 84,16 158,16" fill="none" stroke="#b3f01e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="float-pill">✎ Catatan opsional</div>
+        <div class="float-ic">
+          <svg viewBox="0 0 48 24" width="26" height="13" focusable="false"><polyline points="1,12 12,12 17,3 24,21 30,8 34,12 47,12" fill="none" stroke="#b3f01e" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Prinsip rancangan -->
+    <div class="wrap principles">
+      <small>Prinsip rancangan</small>
+      <div class="pr-row"><span>Opsional</span><span>Tanpa skor</span><span>Hanya kamu</span><span>Bukan diagnosis</span></div>
+    </div>
+
+    <!-- Fitur -->
+    <div class="wrap">
+      <div class="feat-top">
+        <span class="pilltag">Yang ada di NADI</span>
+        <span class="side">Tanpa penilaian, tanpa sanksi.</span>
+      </div>
+      <h2 class="feat-h">Catat kondisimu dengan <span class="g">tenang</span> dan tetap pegang <span class="t">kendali atas datamu</span>, semuanya opsional dan tanpa penghakiman.</h2>
+      <div class="feat-grid">
+        <article class="fcard fc1">
+          <svg class="ghost" viewBox="0 0 120 120" aria-hidden="true"><path d="M70 8a52 52 0 1 0 42 80A42 42 0 0 1 70 8z"/></svg>
+          <h3>Check-in 30 detik</h3>
+          <p>Jam tidur, suasana hati, tingkat energi, dan catatan opsional.</p>
+        </article>
+        <article class="fcard fc2">
+          <svg class="ghost" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="50" fill="none" stroke="#0d3b1f" stroke-width="12"/><path d="M60 28v34l22 14" fill="none" stroke="#0d3b1f" stroke-width="12" stroke-linecap="round"/></svg>
+          <h3>Pengingat yang kamu atur</h3>
+          <p>WhatsApp, frekuensi, dan jam pengingat bisa diubah atau dihentikan kapan saja.</p>
+        </article>
+        <article class="fcard fc3">
+          <svg class="ghost" viewBox="0 0 120 120" aria-hidden="true"><rect x="10" y="60" width="26" height="50"/><rect x="47" y="30" width="26" height="80"/><rect x="84" y="46" width="26" height="64"/></svg>
+          <h3>Ringkasan hanya untukmu</h3>
+          <p>Pola mingguan tanpa skor total. Ringkasan ini bukan diagnosis.</p>
+        </article>
+        <article class="fcard fc4">
+          <svg class="ghost" viewBox="0 0 120 120" aria-hidden="true"><path d="M60 6L106 24V58C106 86 86 106 60 116C34 106 14 86 14 58V24Z"/></svg>
+          <h3>Kamu yang memilih</h3>
+          <p>Menghubungi konselor kampus adalah pilihanmu. Identitas dibagikan hanya atas izinmu.</p>
+        </article>
+      </div>
+    </div>
+
+    <!-- Pita limau: 3 langkah -->
+    <div class="band">
+      <div class="ghost-word" aria-hidden="true">NADI</div>
+      <div class="wrap band-in">
+        <div class="dark-card" aria-hidden="true">
+          <div class="dc-top">
+            <span class="dc-pill">Contoh tampilan</span>
+            <span class="dc-eye">
+              <svg viewBox="0 0 48 24" width="22" height="11" focusable="false"><polyline points="1,12 12,12 17,3 24,21 30,8 34,12 47,12" fill="none" stroke="#e8f0e4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+          <div class="dc-lab">Jam tidur semalam (contoh)</div>
+          <div class="dc-big">6,5 jam</div>
+          <div class="dc-actions">
+            <span class="dc-btn">Ringkasan</span>
+            <span class="dc-btn">Pengaturan</span>
+            <span class="dc-plus">+</span>
+          </div>
+        </div>
+        <div>
+          <h2>Mulai dalam <span class="deep">3 langkah</span></h2>
+          <ol class="steps">
+            <li><span class="n">1</span><div><b>Masuk lewat akun kampus</b><p>NADI hanya memeriksa status mahasiswa baru dan menerbitkan ID pseudonim.</p></div></li>
+            <li><span class="n">2</span><div><b>Setuju dan atur opsi</b><p>WhatsApp, data agregat anonim, jadwal akademik, dan frekuensi pengingat. Semuanya opsional.</p></div></li>
+            <li><span class="n">3</span><div><b>Check-in sekitar 30 detik</b><p>Kamu bisa melewatkannya kapan saja, tanpa sanksi.</p></div></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- Penutup -->
+    <div class="wrap closing">
+      <div>
+        <span class="pilltag">Privasi</span>
+        <h2 class="close-h">Pilihan ada di <span class="g">tanganmu</span>.</h2>
+      </div>
+      <div>
+        <p>NADI tidak mendiagnosis dan tidak menggantikan layanan profesional. Rancangan ini belum diuji.</p>
+        <button type="button" class="btn" data-go="privasi">Masuk dengan akun kampus</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- S2 privasi -->
+  <section id="s-privasi" class="screen sheet" hidden>
+    <span class="pilltag">Privasi</span>
+    <h1>Privasi dan <span class="g">batas</span></h1>
+    <ul class="points">
+      <li><strong>Yang dicatat:</strong> jam tidur, suasana hati, tingkat energi, dan catatan singkat jika kamu mau menulisnya.</li>
+      <li><strong>Yang melihat:</strong> hanya kamu. Hasil check-in tidak tampil di web akademik. Data agregat anonim hanya dibagikan jika kamu setuju.</li>
+      <li>Kamu bisa berhenti dan menghapus datamu kapan saja.</li>
+      <li>NADI tidak mendiagnosis dan tidak menggantikan layanan profesional.</li>
+    </ul>
+    <div class="btnrow">
+      <button type="button" class="btn" data-act="setuju">Setuju memakai NADI</button>
+      <button type="button" class="btn sec" data-act="tidakSekarang">Tidak sekarang</button>
+    </div>
+  </section>
+
+  <!-- S3 opsi (satu per satu) -->
+  <section id="s-opsi" class="screen sheet" hidden>
+    <span class="pilltag">Opsi</span>
+    <h1>Atur <span class="g">opsi</span></h1>
+    <div id="opsi-wiz"></div>
+  </section>
+
+  <!-- S4 check-in -->
+  <section id="s-checkin" class="screen sheet" hidden>
+    <span class="pilltag">Check-in</span>
+    <h1>Bagaimana <span class="g">kondisimu</span> hari ini?</h1>
+    <div id="ck-form" class="ck-grid">
+      <p class="note ck-intro">Sekitar 30 detik.</p>
+      <fieldset class="field ck-tidur">
+        <legend>Jam tidur semalam</legend>
+        <div class="stepper">
+          <button type="button" class="btn sec" data-act="tidurKurang" aria-label="Kurangi 0,5 jam">&minus;</button>
+          <output id="tidur-val" aria-live="polite">7 jam</output>
+          <button type="button" class="btn sec" data-act="tidurTambah" aria-label="Tambah 0,5 jam">+</button>
+        </div>
+      </fieldset>
+      <fieldset class="field ck-energi">
+        <legend>Tingkat energi</legend>
+        <div class="choices" id="energi-choices"></div>
+      </fieldset>
+      <fieldset class="field ck-mood">
+        <legend>Suasana hati hari ini</legend>
+        <div class="choices" id="mood-choices"></div>
+      </fieldset>
+      <div class="field ck-note">
+        <label class="lbl" for="note">Catatan (opsional)</label>
+        <textarea id="note" rows="3" maxlength="200"></textarea>
+        <p class="note">Catatan ini tidak dipindai atau dibaca otomatis oleh sistem.</p>
+      </div>
+      <div class="ck-save">
+        <button type="button" class="btn block" data-act="simpan">Simpan</button>
+      </div>
+    </div>
+    <div id="ck-done" class="card ok" role="status" hidden>
+      <p><strong>Check-in tersimpan. Terima kasih sudah mencatat.</strong></p>
+      <p id="ck-done-offline" class="note" hidden>Disimpan di perangkat dan dikirim saat tersambung.</p>
+      <div class="btnrow">
+        <button type="button" class="btn sec" data-go="ringkasan">Lihat ringkasan mingguan</button>
+        <button type="button" class="btn sec" id="ck-to-rek" data-go="rekomendasi" hidden>Lihat pesan NADI</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- S5 rekomendasi -->
+  <section id="s-rekomendasi" class="screen sheet" hidden>
+    <span class="pilltag">Pesan</span>
+    <h1>Pesan dari <span class="g">NADI</span></h1>
+    <div id="rek-body"></div>
+  </section>
+
+  <!-- S6 janji -->
+  <section id="s-janji" class="screen sheet" hidden>
+    <span class="pilltag">Konseling</span>
+    <h1>Janji temu <span class="g">konselor</span></h1>
+    <div id="janji-body"></div>
+  </section>
+
+  <!-- S7 ringkasan -->
+  <section id="s-ringkasan" class="screen sheet" hidden>
+    <span class="pilltag">Ringkasan</span>
+    <h1>Ringkasan pola <span class="g">mingguan</span></h1>
+    <p class="note">Hanya terlihat olehmu.</p>
+    <div id="sum-body"></div>
+  </section>
+
+  <!-- S8 bantuan -->
+  <section id="s-bantuan" class="screen sheet narrow" hidden>
+    <span class="pilltag">Dukungan</span>
+    <h1>Kamu <span class="g">tidak sendirian</span></h1>
+    <p>Pilih bantuan yang kamu butuhkan sekarang.</p>
+    <div class="stack">
+      <button type="button" class="btn warm block" data-act="bantuan1">Hubungi konselor kampus [kontak diisi sesuai kampus]</button>
+      <button type="button" class="btn warm block" data-act="bantuan2">Hubungi layanan krisis resmi [nomor resmi diisi sesuai ketentuan yang berlaku]</button>
+      <button type="button" class="btn warm block" data-act="bantuan3">Hubungi kontak tepercaya</button>
+    </div>
+    <p id="bantuan-info" class="card" role="status" hidden></p>
+    <p class="note">NADI tidak menghubungi balik otomatis dan tidak memberi tahu siapa pun.</p>
+  </section>
+
+  <!-- S9 pengaturan -->
+  <section id="s-pengaturan" class="screen sheet" hidden>
+    <span class="pilltag">Pengaturan</span>
+    <h1>Pengaturan dan <span class="g">privasi</span></h1>
+    <div id="opsi-all"></div>
+    <h2>Berhenti atau hapus</h2>
+    <div class="btnrow">
+      <button type="button" class="btn sec" data-act="berhenti">Berhenti memakai NADI</button>
+      <button type="button" class="btn sec" data-act="hapus">Hapus semua data saya</button>
+    </div>
+    <div id="hapus-konfirm" class="card" role="alert" hidden>
+      <p><strong>Langkah 2 dari 2.</strong> Semua check-in, opsi, dan nomor yang tersimpan akan dihapus dan tidak bisa dikembalikan. Lanjutkan?</p>
+      <div class="btnrow">
+        <button type="button" class="btn" data-act="hapusYa">Ya, hapus semua data</button>
+        <button type="button" class="btn sec" data-act="hapusBatal">Batal</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- S10 agregat (peran Kemahasiswaan) -->
+  <section id="s-agregat" class="screen sheet" hidden>
+    <div class="campus-bar">Tampilan Kemahasiswaan (simulasi)</div>
+    <h1>Data agregat <span class="g">anonim</span></h1>
+    <p class="tag-data">Data contoh (n = 48)</p>
+    <div class="grid2">
+      <div class="card">
+        <h2>Pengguna aktif bulan ini</h2>
+        <p class="big">41 dari 48</p>
+      </div>
+      <div class="card">
+        <h2>Proporsi yang memilih konseling</h2>
+        <p class="big">6 dari 48</p>
+      </div>
+    </div>
+    <div class="dark-panel">
+      <h2>Rata-rata jam tidur kelompok per minggu</h2>
+      <div id="agg-chart"></div>
+    </div>
+    <p class="note">Hanya data agregat anonim bulanan. Tidak ada data per orang, nama, atau ID.</p>
+    <div class="card dashed">
+      <p class="note"><strong>Contoh tampilan jika kelompok di bawah ambang (n = 12):</strong></p>
+      <p>Data belum ditampilkan: kelompok di bawah ambang minimum (asumsi: 20).</p>
+    </div>
+  </section>
+
+  <!-- Layar akhir (setelah "Tidak sekarang", berhenti, atau hapus) -->
+  <section id="s-akhir" class="screen sheet narrow" hidden>
+    <span class="pilltag">Selesai</span>
+    <h1>Terima <span class="g">kasih</span></h1>
+    <p id="akhir-teks"></p>
+    <button type="button" class="btn sec block" data-jump="menu">Kembali ke menu web akademik (simulasi)</button>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap in">
+    <div class="fnote"><b>NADI</b> &middot; Mockup rancangan, belum diuji. Bukan alat diagnosis.</div>
+        <nav id="foot2" aria-label="Navigasi bawah">
+      <button type="button" class="btn link" data-go="sso">Beranda</button>
+      <button type="button" class="btn link" data-go="checkin">Check-in</button>
+      <button type="button" class="btn link" data-go="ringkasan">Ringkasan mingguan</button>
+      <button type="button" class="btn link" data-go="pengaturan">Pengaturan dan privasi</button>
+    </nav>
+  </div>
+</footer>
+
+<!-- Tombol bantuan, selalu terlihat di layar mahasiswa -->
+<button type="button" class="help-fab" id="help-fab" data-go="bantuan">
+  <span class="hf-ic" aria-hidden="true">+</span> Saya butuh bantuan sekarang
+</button>
+
+<!-- Panel demo -->
+<details class="panel">
+  <summary>Panel demo, bukan bagian rancangan</summary>
+  <div class="panel-body">
+    <p class="pl">Loncat ke layar</p>
+    <div class="jump">
+      <button type="button" data-jump="menu">S0 menu</button>
+      <button type="button" data-jump="sso">S1 sso</button>
+      <button type="button" data-jump="privasi">S2 privasi</button>
+      <button type="button" data-jump="opsi">S3 opsi</button>
+      <button type="button" data-jump="checkin">S4 checkin</button>
+      <button type="button" data-jump="rekomendasi">S5 rekomendasi</button>
+      <button type="button" data-jump="janji">S6 janji</button>
+      <button type="button" data-jump="ringkasan">S7 ringkasan</button>
+      <button type="button" data-jump="bantuan">S8 bantuan</button>
+      <button type="button" data-jump="pengaturan">S9 pengaturan</button>
+      <button type="button" data-jump="agregat">S10 agregat</button>
+    </div>
+    <p class="pl">Saklar</p>
+    <label class="pchk"><input type="checkbox" data-panel="offline"> Offline</label>
+    <label class="pchk"><input type="checkbox" data-panel="waGagal"> WhatsApp gagal</label>
+    <label class="pchk"><input type="checkbox" data-panel="jadwal"> Jadwal diisi</label>
+    <p class="pl">Ambang terpenuhi</p>
+    <label class="pchk"><input type="radio" name="p-tingkat" value="0" data-panel="tingkat"> Tidak</label>
+    <label class="pchk"><input type="radio" name="p-tingkat" value="1" data-panel="tingkat"> Tingkat 1</label>
+    <label class="pchk"><input type="radio" name="p-tingkat" value="2" data-panel="tingkat"> Tingkat 2</label>
+    <p class="pl"><label for="p-peran">Peran</label></p>
+    <select id="p-peran" data-panel="peran">
+      <option value="mahasiswa">Mahasiswa</option>
+      <option value="kemahasiswaan">Kemahasiswaan</option>
+    </select>
+  </div>
+</details>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
